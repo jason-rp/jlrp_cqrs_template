@@ -11,10 +11,10 @@ namespace JLRP.Data.Repositories
 {
     public class Repository<TModel> : IRepository<TModel> where TModel : ModelBase
     {
-        private readonly TemplateDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
         protected readonly DbSet<TModel> ModelDbSets;
 
-        public Repository(TemplateDbContext dbContext)
+        public Repository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException();
             ModelDbSets = _dbContext.Set<TModel>();

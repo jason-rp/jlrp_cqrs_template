@@ -29,7 +29,7 @@ namespace JLRP.API
             services.AddControllers();
 
             services.AddRouting(options => options.LowercaseUrls = true);
-            services.AddDbContext<TemplateDbContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                     sqlOptions =>

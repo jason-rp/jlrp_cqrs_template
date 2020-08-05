@@ -8,7 +8,7 @@ namespace JLRP.Data.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(TemplateDbContext dbContext) : base(dbContext)
+        public UserRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 
